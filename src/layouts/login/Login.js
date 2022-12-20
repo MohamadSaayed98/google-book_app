@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import jwtDecode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import dotenv from "dotenv";
 
 import "./Login.css";
 
 function Login() {
   const navigate = useNavigate();
+  dotenv.config();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   function handleCallbackResponse(response) {
@@ -18,8 +20,7 @@ function Login() {
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
-      client_id:
-        "560471253139-phseuj0vsdsr6kkfgla3pdaqdbg6h78c.apps.googleusercontent.com",
+      client_id: process.env.CLIENT_ID,
       callback: handleCallbackResponse,
     });
 
@@ -53,6 +54,3 @@ function Login() {
 }
 
 export default Login;
-
-//client secret: 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
-//clientId: 560471253139-phseuj0vsdsr6kkfgla3pdaqdbg6h78c.apps.googleusercontent.com
