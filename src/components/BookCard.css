@@ -1,0 +1,52 @@
+.book {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.335);
+  backdrop-filter: blur(3px);
+  border-radius: 5px;
+  margin: 5px;
+  font-family: "lato";
+  padding: 10px;
+}
+
+.book img {
+  margin-top: 0;
+  margin-right: 10px;
+}
+
+.book p {
+  margin: 0;
+  color: #e4e3e8;
+  margin-bottom: 10px;
+  font-size: large;
+}
+
+.book-preview-btn {
+  background-color: #32343b;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #d76954;
+  margin-top: 1rem;
+  border-style: none;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .book {
+    font-size: 10px;
+    width: 10px;
+  }
+
+  .book p {
+    margin: 0;
+    color: #e4e3e8;
+    margin-bottom: 10px;
+    width: 200%;
+    /* width: min-content; */
+  }
+
+  .book img {
+    margin-top: 0;
+    margin-right: 10px;
+    width: 120px;
+  }
+}
